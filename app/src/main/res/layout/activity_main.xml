@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/cancion"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/cancion"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="26dp" />
+
+    <ImageButton
+        android:id="@+id/playStop"
+        android:layout_width="95dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="27dp"
+        android:onClick="playStop"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toEndOf="@+id/previous"
+        app:layout_constraintTop_toBottomOf="@+id/cancion"
+        app:srcCompat="@drawable/play" />
+
+    <ImageButton
+        android:id="@+id/previous"
+        android:layout_width="54dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="44dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cancion"
+        app:srcCompat="@drawable/previous" />
+
+    <ImageButton
+        android:id="@+id/next"
+        android:layout_width="54dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="42dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toEndOf="@+id/playStop"
+        app:layout_constraintTop_toBottomOf="@+id/cancion"
+        app:srcCompat="@drawable/next" />
+
+    <ImageView
+        android:id="@+id/imageVolume"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="53dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/previous"
+        app:srcCompat="@drawable/volume" />
+
+    <ImageView
+        android:id="@+id/imageForward"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="23dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageVolume"
+        app:srcCompat="@drawable/forward" />
+
+    <SeekBar
+        android:id="@+id/volume"
+        android:layout_width="226dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toEndOf="@+id/imageVolume"
+        app:layout_constraintTop_toBottomOf="@+id/playStop" />
+
+    <SeekBar
+        android:id="@+id/progress"
+        android:layout_width="226dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="23dp"
+        app:layout_constraintStart_toEndOf="@+id/imageForward"
+        app:layout_constraintTop_toBottomOf="@+id/volume" />
+
+    <ListView
+        android:id="@+id/lista"
+        android:layout_width="395dp"
+        android:layout_height="385dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageForward" />
+
+
+</android.support.constraint.ConstraintLayout>
